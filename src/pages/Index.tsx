@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { Rocket } from "lucide-react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const agents = [
   {
@@ -59,6 +61,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-garden-dark">
+      <Header />
+      
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center">
         {/* Background Image with Blur Effect */}
@@ -79,7 +83,7 @@ const Index = () => {
             <div className="flex justify-center mb-6">
               <Rocket className="h-20 w-20 text-garden-accent" />
             </div>
-            <h1 className="text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 bg-clip-text text-transparent">
               From Consultation to Automation: Grow Your Business with Your Always-On AI Partner
             </h1>
           </div>
@@ -95,20 +99,20 @@ const Index = () => {
 
       {/* Agents Section */}
       <div className="container mx-auto px-4 py-24">
-        {/* Category Filter */}
         <CategoryFilter 
           categories={categories}
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
         />
 
-        {/* Agent Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fade-in">
           {filteredAgents.map((agent) => (
             <AgentCard key={agent.id} {...agent} />
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
