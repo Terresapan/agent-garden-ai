@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { Brain, Rocket } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 const agents = [
   {
@@ -58,21 +58,43 @@ const Index = () => {
     : agents.filter(agent => agent.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-garden-dark text-white">
+    <div className="min-h-screen bg-garden-dark">
       {/* Hero Section */}
-      <div className="container mx-auto px-4 py-24 text-center">
-        <div className="max-w-3xl mx-auto mb-16 animate-fade-up">
-          <div className="flex justify-center mb-6">
-            <Rocket className="h-16 w-16 text-garden-accent" />
-          </div>
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-garden-accent bg-clip-text text-transparent">
-            From Consultation to Automation: Grow Your Business
-          </h1>
-          <p className="text-xl text-gray-400">
-            Discover AI agents that help your business thrive in the digital age
-          </p>
+      <div className="relative h-screen flex items-center justify-center">
+        {/* Background Image with Blur Effect */}
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: "url('/lovable-uploads/e115a3e1-74ab-4d9c-b2c1-35262aeaec21.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="absolute inset-0 bg-garden-dark/70 backdrop-blur-sm"></div>
         </div>
 
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center animate-fade-up">
+            <div className="flex justify-center mb-6">
+              <Rocket className="h-20 w-20 text-garden-accent" />
+            </div>
+            <h1 className="text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              From Consultation to Automation: Grow Your Business with Your Always-On AI Partner
+            </h1>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-8 h-12 border-2 border-garden-accent rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-3 bg-garden-accent rounded-full"></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Agents Section */}
+      <div className="container mx-auto px-4 py-24">
         {/* Category Filter */}
         <CategoryFilter 
           categories={categories}

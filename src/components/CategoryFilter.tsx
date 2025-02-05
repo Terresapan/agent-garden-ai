@@ -12,7 +12,7 @@ export const CategoryFilter = ({ categories, activeCategory, onCategoryChange }:
       <Button
         variant={activeCategory === "all" ? "default" : "outline"}
         onClick={() => onCategoryChange("all")}
-        className="rounded-full"
+        className="rounded-full bg-garden-accent/20 hover:bg-garden-accent/30 border-garden-accent/30 text-white"
       >
         All
       </Button>
@@ -21,7 +21,11 @@ export const CategoryFilter = ({ categories, activeCategory, onCategoryChange }:
           key={category}
           variant={activeCategory === category ? "default" : "outline"}
           onClick={() => onCategoryChange(category)}
-          className="rounded-full"
+          className={`rounded-full ${
+            activeCategory === category
+              ? "bg-garden-accent text-white hover:bg-garden-accent/90"
+              : "bg-garden-accent/20 hover:bg-garden-accent/30 border-garden-accent/30 text-white"
+          }`}
         >
           {category}
         </Button>
