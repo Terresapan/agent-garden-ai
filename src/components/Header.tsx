@@ -21,11 +21,12 @@ export const Header = () => {
           )}
         </div>
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-white hover:text-garden-accent transition-colors">
-            AI Garden
+          <Link to="/" className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:opacity-80 transition-opacity">
+            TAP Agent Garden for SMB
           </Link>
         </div>
       </div>
     </header>
   );
 };
+

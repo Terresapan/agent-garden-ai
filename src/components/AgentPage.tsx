@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Brain, CheckCircle, XCircle } from "lucide-react";
+import { Brain, CheckCircle, XCircle, MessageSquare } from "lucide-react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
@@ -60,7 +60,28 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
             </Card>
           </div>
 
-          <div className="text-center">
+          <Card className="p-6 bg-garden-dark/50 backdrop-blur mb-8">
+            <h2 className="text-xl font-semibold mb-4 flex items-center gap-2 text-white">
+              <MessageSquare className="text-garden-accent" />
+              User Instructions
+            </h2>
+            <ul className="space-y-3">
+              <li className="text-gray-400 flex items-start gap-2">
+                <span className="text-garden-accent mt-1">•</span>
+                Visit the tool using the "Try Me" button below
+              </li>
+              <li className="text-gray-400 flex items-start gap-2">
+                <span className="text-garden-accent mt-1">•</span>
+                Follow the on-screen prompts to input your requirements
+              </li>
+              <li className="text-gray-400 flex items-start gap-2">
+                <span className="text-garden-accent mt-1">•</span>
+                Review the AI-generated suggestions and implement them
+              </li>
+            </ul>
+          </Card>
+
+          <div className="text-center flex justify-center gap-4">
             <Button 
               size="lg" 
               className="bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
@@ -68,6 +89,15 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
             >
               <Brain className="mr-2 h-5 w-5" />
               Try Me
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="border-garden-accent text-garden-accent hover:bg-garden-accent/10"
+              onClick={() => window.open('/feedback', '_blank')}
+            >
+              <MessageSquare className="mr-2 h-5 w-5" />
+              Tell us what you think
             </Button>
           </div>
         </div>
