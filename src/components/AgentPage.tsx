@@ -61,7 +61,11 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-garden-accent hover:bg-garden-accent/90 text-garden-dark">
+            <Button 
+              size="lg" 
+              className="bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
+              onClick={() => window.open('https://advancedmatcher.streamlit.app/', '_blank')}
+            >
               <Brain className="mr-2 h-5 w-5" />
               Try Me
             </Button>
