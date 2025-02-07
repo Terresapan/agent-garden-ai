@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
@@ -132,9 +133,12 @@ const Index = () => {
             <div className="flex justify-center mb-6">
               <Rocket className="h-20 w-20 text-garden-accent" />
             </div>
-            <h1 className="text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 bg-clip-text text-transparent">
-              From Consultation to Automation: Grow Your Business with Your Always-On AI Partner
+            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-[#0FA0CE] via-[#403E43] to-[#222222] bg-clip-text text-transparent">
+              From Consultation to Automation:
             </h1>
+            <p className="text-4xl text-white">
+              Grow Your Business with Your Always-On AI Partner
+            </p>
           </div>
         </div>
 
