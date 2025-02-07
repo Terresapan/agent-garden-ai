@@ -1,12 +1,20 @@
-
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { Rocket } from "lucide-react";
+import { Rocket, Lock } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Card } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const agents = [
+  {
+    id: "mememorph",
+    title: "MemeMorph",
+    description: "Morphing web pages into viral memes",
+    category: "Featured",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+  },
   {
     id: "calendlysocial",
     title: "CalendlySocial",
@@ -104,10 +112,13 @@ const categories = ["Content Creation", "Marketing Strategy", "Decision Making",
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const navigate = useNavigate();
 
   const filteredAgents = activeCategory === "all" 
-    ? agents 
+    ? agents.filter(agent => agent.category !== "Featured")
     : agents.filter(agent => agent.category === activeCategory);
+
+  const featuredAgent = agents.find(agent => agent.category === "Featured");
 
   return (
     <div className="min-h-screen bg-garden-dark">
@@ -133,7 +144,7 @@ const Index = () => {
             <div className="flex justify-center mb-6">
               <Rocket className="h-20 w-20 text-garden-accent" />
             </div>
-            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-[#0FA0CE] via-[#403E43] to-[#222222] bg-clip-text text-transparent">
+            <h1 className="text-6xl font-bold mb-4 whitespace-nowrap bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 bg-clip-text text-transparent">
               From Consultation to Automation:
             </h1>
             <p className="text-4xl text-white">
@@ -152,6 +163,40 @@ const Index = () => {
 
       {/* Agents Section */}
       <div className="container mx-auto px-4 py-24">
+        {/* Featured Cards */}
+        <div className="flex gap-6 mb-12">
+          {/* Featured Agent Card */}
+          <Card 
+            onClick={() => navigate(`/agent/mememorph`)}
+            className="w-2/3 group cursor-pointer overflow-hidden bg-garden-dark border-garden-accent/20 hover:border-garden-accent/40 transition-all duration-300"
+          >
+            <div className="aspect-video overflow-hidden">
+              <img 
+                src={featuredAgent?.image} 
+                alt={featuredAgent?.title}
+                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-6">
+              <div className="text-xs text-garden-accent mb-2">Featured Agent</div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{featuredAgent?.title}</h3>
+              <p className="text-gray-400 text-sm">{featuredAgent?.description}</p>
+            </div>
+          </Card>
+
+          {/* Locked Card */}
+          <Card className="w-1/3 relative group cursor-pointer overflow-hidden bg-garden-dark/50 backdrop-blur border-garden-accent/20">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Lock className="h-12 w-12 text-garden-accent/50" />
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-garden-dark/80 backdrop-blur-sm">
+              <p className="text-white text-center px-6">
+                Coming back more and giving feedback to unlock the advanced agents
+              </p>
+            </div>
+          </Card>
+        </div>
+
         <CategoryFilter 
           categories={categories}
           activeCategory={activeCategory}

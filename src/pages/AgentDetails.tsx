@@ -2,6 +2,21 @@ import { useParams } from "react-router-dom";
 import { AgentPage } from "@/components/AgentPage";
 
 const agentData = {
+  "mememorph": {
+    title: "MemeMorph",
+    description: "Morphing web pages into viral memes",
+    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+    problems: [
+      "Difficulty creating engaging social media content",
+      "Time-consuming meme creation process",
+      "Lack of viral potential in content",
+    ],
+    solutions: [
+      "AI-powered meme generation",
+      "Viral content optimization",
+      "Quick and efficient content creation",
+    ],
+  },
   "calendlysocial": {
     title: "CalendlySocial",
     description: "Automate your social media calendar with AI-powered scheduling",
