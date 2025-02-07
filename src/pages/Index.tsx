@@ -1,10 +1,12 @@
+
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { Rocket, Lock } from "lucide-react";
+import { Rocket, Lock, MessageCircle, X } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
 const agents = [
@@ -112,6 +114,7 @@ const categories = ["Content Creation", "Marketing Strategy", "Decision Making",
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const navigate = useNavigate();
 
   const filteredAgents = activeCategory === "all" 
@@ -119,6 +122,11 @@ const Index = () => {
     : agents.filter(agent => agent.category === activeCategory);
 
   const featuredAgent = agents.find(agent => agent.category === "Featured");
+
+  const handleChatSubmit = () => {
+    navigate('/agent/mememorph');
+    setIsChatOpen(false);
+  };
 
   return (
     <div className="min-h-screen bg-garden-dark">
@@ -186,6 +194,13 @@ const Index = () => {
 
           {/* Locked Card */}
           <Card className="w-1/3 relative group cursor-pointer overflow-hidden bg-garden-dark/50 backdrop-blur border-garden-accent/20">
+            <div 
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e')",
+                opacity: 0.2
+              }}
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <Lock className="h-12 w-12 text-garden-accent/50" />
             </div>
@@ -208,6 +223,47 @@ const Index = () => {
             <AgentCard key={agent.id} {...agent} />
           ))}
         </div>
+      </div>
+
+      {/* Chat Assistant Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className="h-14 w-14 rounded-full bg-garden-accent hover:bg-garden-accent/80 transition-colors"
+        >
+          {isChatOpen ? (
+            <X className="h-6 w-6 text-garden-dark" />
+          ) : (
+            <MessageCircle className="h-6 w-6 text-garden-dark" />
+          )}
+        </Button>
+
+        {/* Chat Window */}
+        {isChatOpen && (
+          <div className="absolute bottom-20 right-0 w-80 bg-garden-dark border border-garden-accent/20 rounded-lg shadow-lg overflow-hidden">
+            <div className="p-4 border-b border-garden-accent/20">
+              <h3 className="text-white font-semibold">AI Assistant</h3>
+            </div>
+            <div className="p-4 h-80 overflow-y-auto">
+              <div className="space-y-4">
+                <div className="text-white">
+                  Tell me the problem you want to solve, and let me pick an agent for you!
+                </div>
+                <div className="bg-garden-accent/10 p-3 rounded-lg">
+                  <p className="text-white mb-2">
+                    Our featured agent MemeMorph will be a perfect fit.
+                  </p>
+                  <Button
+                    onClick={handleChatSubmit}
+                    className="w-full bg-garden-accent hover:bg-garden-accent/80 text-garden-dark"
+                  >
+                    Try MemeMorph
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       <Footer />
