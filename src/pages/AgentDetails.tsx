@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { AgentPage } from "@/components/AgentPage";
 
@@ -91,6 +90,111 @@ const agentData = {
       "AI-powered counterarguments",
       "Structured debate framework",
       "Deep analysis of perspectives",
+    ],
+  },
+  "brand-alchemist": {
+    title: "Brand Alchemist",
+    description: "Transforms ideas into powerful brand strategies",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    problems: [
+      "Inconsistent brand messaging",
+      "Difficulty standing out in the market",
+      "Unclear brand identity",
+    ],
+    solutions: [
+      "AI-powered brand strategy development",
+      "Competitive positioning analysis",
+      "Brand voice and identity optimization",
+    ],
+  },
+  "site-sage": {
+    title: "Site Sage",
+    description: "Analyzes and optimizes websites for peak performance",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    problems: [
+      "Poor website performance",
+      "Low conversion rates",
+      "Suboptimal user experience",
+    ],
+    solutions: [
+      "Performance analytics and optimization",
+      "UX improvement recommendations",
+      "Conversion rate optimization",
+    ],
+  },
+  "lead-scout": {
+    title: "Lead Scout",
+    description: "Hunts and delivers high-quality leads",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    problems: [
+      "Inefficient lead generation",
+      "Poor lead quality",
+      "High customer acquisition costs",
+    ],
+    solutions: [
+      "AI-driven lead scoring",
+      "Automated lead nurturing",
+      "Quality lead identification",
+    ],
+  },
+  "capital-navigator": {
+    title: "Capital Navigator",
+    description: "Guides businesses in securing funding and financial growth",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+    problems: [
+      "Limited access to funding",
+      "Complex financial planning",
+      "Growth barriers",
+    ],
+    solutions: [
+      "Funding opportunity identification",
+      "Financial strategy development",
+      "Growth pathway planning",
+    ],
+  },
+  "value-architect": {
+    title: "Value Architect",
+    description: "Crafts compelling value propositions that resonate",
+    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52",
+    problems: [
+      "Unclear value proposition",
+      "Weak market differentiation",
+      "Customer value misalignment",
+    ],
+    solutions: [
+      "Value proposition development",
+      "Market differentiation strategy",
+      "Customer value alignment",
+    ],
+  },
+  "customer-oracle": {
+    title: "Customer Oracle",
+    description: "Deciphers customer needs and behaviors",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    problems: [
+      "Limited customer insights",
+      "Misunderstood customer needs",
+      "Poor customer engagement",
+    ],
+    solutions: [
+      "AI-powered customer analysis",
+      "Behavior pattern recognition",
+      "Need identification automation",
+    ],
+  },
+  "vision-setter": {
+    title: "Vision Setter",
+    description: "Helps define, prioritize, and achieve business goals",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    problems: [
+      "Unclear business direction",
+      "Goal misalignment",
+      "Strategy execution challenges",
+    ],
+    solutions: [
+      "Vision development framework",
+      "Goal prioritization system",
+      "Strategy execution roadmap",
     ],
   },
 };

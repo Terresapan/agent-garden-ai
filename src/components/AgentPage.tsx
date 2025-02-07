@@ -93,11 +93,11 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-garden-accent text-garden-accent hover:bg-garden-accent/10"
+              className="border-garden-accent text-garden-accent hover:bg-garden-accent hover:text-white"
               onClick={() => window.open('/feedback', '_blank')}
             >
               <MessageSquare className="mr-2 h-5 w-5" />
-              Tell us what you think
+              Tell Us What You Think
             </Button>
           </div>
         </div>

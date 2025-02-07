@@ -48,6 +48,55 @@ const agents = [
     category: "Decision Making",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
   },
+  {
+    id: "brand-alchemist",
+    title: "Brand Alchemist",
+    description: "Transforms ideas into powerful brand strategies",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+  },
+  {
+    id: "site-sage",
+    title: "Site Sage",
+    description: "Analyzes and optimizes websites for peak performance",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+  },
+  {
+    id: "lead-scout",
+    title: "Lead Scout",
+    description: "Hunts and delivers high-quality leads",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+  },
+  {
+    id: "capital-navigator",
+    title: "Capital Navigator",
+    description: "Guides businesses in securing funding and financial growth",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+  },
+  {
+    id: "value-architect",
+    title: "Value Architect",
+    description: "Crafts compelling value propositions that resonate",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52",
+  },
+  {
+    id: "customer-oracle",
+    title: "Customer Oracle",
+    description: "Deciphers customer needs and behaviors",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+  },
+  {
+    id: "vision-setter",
+    title: "Vision Setter",
+    description: "Helps define, prioritize, and achieve business goals",
+    category: "JP Morgan Specific",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+  },
 ];
 
 const categories = ["Content Creation", "Marketing Strategy", "Decision Making", "Understand your own data", "JP Morgan Specific"];
