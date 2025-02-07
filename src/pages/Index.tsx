@@ -1,12 +1,12 @@
-
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { Rocket, Lock, MessageCircle, X } from "lucide-react";
+import { Rocket, Lock, MessageCircle, X, Send } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
 import { useNavigate } from "react-router-dom";
 
 const agents = [
@@ -115,6 +115,8 @@ const categories = ["Content Creation", "Marketing Strategy", "Decision Making",
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const [showResponse, setShowResponse] = useState(false);
   const navigate = useNavigate();
 
   const filteredAgents = activeCategory === "all" 
@@ -126,6 +128,13 @@ const Index = () => {
   const handleChatSubmit = () => {
     navigate('/agent/mememorph');
     setIsChatOpen(false);
+  };
+
+  const handleSendMessage = () => {
+    if (query.trim()) {
+      setShowResponse(true);
+      setQuery("");
+    }
   };
 
   return (
@@ -228,7 +237,11 @@ const Index = () => {
       {/* Chat Assistant Button */}
       <div className="fixed bottom-6 right-6 z-50">
         <Button
-          onClick={() => setIsChatOpen(!isChatOpen)}
+          onClick={() => {
+            setIsChatOpen(!isChatOpen);
+            setShowResponse(false);
+            setQuery("");
+          }}
           className="h-14 w-14 rounded-full bg-garden-accent hover:bg-garden-accent/80 transition-colors"
         >
           {isChatOpen ? (
@@ -249,17 +262,38 @@ const Index = () => {
                 <div className="text-white">
                   Tell me the problem you want to solve, and let me pick an agent for you!
                 </div>
-                <div className="bg-garden-accent/10 p-3 rounded-lg">
-                  <p className="text-white mb-2">
-                    Our featured agent MemeMorph will be a perfect fit.
-                  </p>
-                  <Button
-                    onClick={handleChatSubmit}
-                    className="w-full bg-garden-accent hover:bg-garden-accent/80 text-garden-dark"
-                  >
-                    Try MemeMorph
-                  </Button>
-                </div>
+                
+                {showResponse && (
+                  <div className="bg-garden-accent/10 p-3 rounded-lg">
+                    <p className="text-white mb-2">
+                      Our featured agent MemeMorph will be a perfect fit.
+                    </p>
+                    <Button
+                      onClick={handleChatSubmit}
+                      className="w-full bg-garden-accent hover:bg-garden-accent/80 text-garden-dark"
+                    >
+                      Try MemeMorph
+                    </Button>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* Chat Input */}
+            <div className="p-4 border-t border-garden-accent/20">
+              <div className="flex gap-2">
+                <Textarea
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  placeholder="Type your question..."
+                  className="min-h-[60px] bg-garden-dark text-white border-garden-accent/20 focus:border-garden-accent"
+                />
+                <Button
+                  onClick={handleSendMessage}
+                  className="bg-garden-accent hover:bg-garden-accent/80 text-garden-dark"
+                >
+                  <Send className="h-4 w-4" />
+                </Button>
               </div>
             </div>
           </div>
