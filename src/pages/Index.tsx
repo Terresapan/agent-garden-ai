@@ -1,7 +1,8 @@
+
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
-import { Rocket, Lock, MessageCircle, X, Send } from "lucide-react";
+import { Rocket, Lock, MessageCircle, X, Send, Bot } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -249,6 +250,16 @@ const Index = () => {
             <AgentCard key={agent.id} {...agent} />
           ))}
         </div>
+
+        {/* Load More Button */}
+        <div className="mt-12 flex justify-center">
+          <Button
+            variant="outline"
+            className="border-garden-accent/20 text-garden-accent hover:bg-garden-accent/10"
+          >
+            Load More
+          </Button>
+        </div>
       </div>
 
       {/* Chat Assistant Button */}
@@ -259,12 +270,17 @@ const Index = () => {
             setShowResponse(false);
             setQuery("");
           }}
-          className="h-14 w-14 rounded-full bg-garden-accent hover:bg-garden-accent/80 transition-colors"
+          className={`${
+            isChatOpen ? "h-14 w-14" : "h-14 px-6"
+          } rounded-full bg-garden-accent hover:bg-garden-accent/80 transition-colors flex items-center gap-2`}
         >
           {isChatOpen ? (
             <X className="h-6 w-6 text-garden-dark" />
           ) : (
-            <MessageCircle className="h-6 w-6 text-garden-dark" />
+            <>
+              <Bot className="h-5 w-5 text-garden-dark" />
+              <span className="text-garden-dark font-medium">Ask AI</span>
+            </>
           )}
         </Button>
 
