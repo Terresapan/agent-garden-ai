@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
@@ -198,9 +197,9 @@ const Index = () => {
       {/* Agents Section */}
       <div className="container mx-auto px-4 py-24">
         {/* Strategy Band */}
-        <div className="w-full bg-garden-dark py-12 mb-12 border-y border-garden-accent/20">
-          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-200">
-            From Strategy to Execution: Scale Your Business with Intelligent AI Solutions
+        <div className="w-full bg-garden-dark py-16 mb-16 border-y border-garden-accent/20">
+          <h2 className="text-5xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-200">
+            Try Our Most Popular AI Agents
           </h2>
         </div>
 
@@ -250,6 +249,13 @@ const Index = () => {
           </Card>
         </div>
 
+        {/* Strategy Band Band */}
+        <div className="w-full bg-garden-accent/10 py-24 mt-28 mb-28 flex flex-col items-center">
+          <h2 className="text-5xl font-bold text-garden-accent">
+            Scale Your Business with Intelligent AI Solutions
+          </h2>
+        </div>
+
         <CategoryFilter
           categories={categories}
           activeCategory={activeCategory}
@@ -273,8 +279,8 @@ const Index = () => {
       </div>
 
       {/* Feedback Band */}
-      <div className="w-full bg-garden-accent/10 py-12 mb-24">
-        <h2 className="text-4xl font-bold text-garden-accent">
+      <div className="w-full bg-garden-accent/10 py-24 mb-6 flex flex-col items-center">
+        <h2 className="text-6xl font-bold text-garden-accent">
           Your Feedback, Our Priority
         </h2>
       </div>
@@ -353,11 +359,16 @@ const Index = () => {
       <div id="feedback" className="container mx-auto px-4 py-24">
         <div className="max-w-2xl mx-auto">
           <Card className="p-6 bg-garden-dark/50 backdrop-blur">
-            <h1 className="text-3xl font-bold mb-6 text-white">Share Your Feedback</h1>
-            
+            <h1 className="text-3xl font-bold mb-6 text-white">
+              Share Your Feedback
+            </h1>
+
             <form onSubmit={handleFeedbackSubmit} className="space-y-6">
               <div>
-                <label htmlFor="username" className="block text-sm font-medium text-gray-200 mb-2">
+                <label
+                  htmlFor="username"
+                  className="block text-sm font-medium text-gray-200 mb-2"
+                >
                   Username
                 </label>
                 <Input
@@ -368,9 +379,12 @@ const Index = () => {
                   placeholder="Enter your username"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-200 mb-2"
+                >
                   Email
                 </label>
                 <Input
@@ -382,9 +396,12 @@ const Index = () => {
                   placeholder="Enter your email"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="comment" className="block text-sm font-medium text-gray-200 mb-2">
+                <label
+                  htmlFor="comment"
+                  className="block text-sm font-medium text-gray-200 mb-2"
+                >
                   Comment
                 </label>
                 <Textarea
@@ -395,8 +412,8 @@ const Index = () => {
                   placeholder="Share your thoughts..."
                 />
               </div>
-              
-              <Button 
+
+              <Button
                 type="submit"
                 className="w-full bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
               >

@@ -2,10 +2,10 @@ import { useParams } from "react-router-dom";
 import { AgentPage } from "@/components/AgentPage";
 
 const agentData = {
-  "mememorph": {
+  mememorph: {
     title: "MemeMorph",
     description: "Morphing web pages into viral memes",
-    image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12",
+    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52",
     problems: [
       "Difficulty creating engaging social media content",
       "Time-consuming meme creation process",
@@ -17,9 +17,10 @@ const agentData = {
       "Quick and efficient content creation",
     ],
   },
-  "calendlysocial": {
+  calendlysocial: {
     title: "CalendlySocial",
-    description: "Automate your social media calendar with AI-powered scheduling",
+    description:
+      "Automate your social media calendar with AI-powered scheduling",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     problems: [
       "Time-consuming social media scheduling",
@@ -47,7 +48,7 @@ const agentData = {
       "Smart content optimization suggestions",
     ],
   },
-  "copywriter": {
+  copywriter: {
     title: "Copywriter",
     description: "Create compelling social media posts automatically",
     image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
