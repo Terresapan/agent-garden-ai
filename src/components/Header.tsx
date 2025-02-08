@@ -1,4 +1,3 @@
-
 import { ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -11,8 +10,8 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           {!isHomePage && (
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center gap-2 text-garden-accent hover:text-garden-accent/80 transition-colors"
             >
               <ArrowLeft className="h-5 w-5" />
@@ -21,7 +20,10 @@ export const Header = () => {
           )}
         </div>
         <div className="flex items-center gap-4">
-          <Link to="/" className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 hover:opacity-80 transition-opacity">
+          <Link
+            to="/"
+            className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-300 hover:opacity-80 transition-opacity"
+          >
             TAP Agent Garden for SMB
           </Link>
         </div>
@@ -29,4 +31,3 @@ export const Header = () => {
     </header>
   );
 };
-

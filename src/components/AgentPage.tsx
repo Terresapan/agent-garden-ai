@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, XCircle, MessageSquare } from "lucide-react";
@@ -19,12 +18,18 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
   return (
     <div className="min-h-screen bg-garden-dark">
       <Header />
-      
+
       <div className="container mx-auto px-4 py-24 animate-fade-in">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <img src={agent.image} alt={agent.title} className="w-full h-64 object-cover rounded-lg mb-6" />
-            <h1 className="text-4xl font-bold mb-4 text-white">{agent.title}</h1>
+            <img
+              src={agent.image}
+              alt={agent.title}
+              className="w-full h-64 object-cover rounded-lg mb-6"
+            />
+            <h1 className="text-4xl font-bold mb-4 text-white">
+              {agent.title}
+            </h1>
             <p className="text-gray-400 text-lg">{agent.description}</p>
           </div>
 
@@ -36,7 +41,10 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
               </h2>
               <ul className="space-y-3">
                 {agent.problems.map((problem, index) => (
-                  <li key={index} className="text-gray-400 flex items-start gap-2">
+                  <li
+                    key={index}
+                    className="text-gray-400 flex items-start gap-2"
+                  >
                     <span className="text-red-500 mt-1">•</span>
                     {problem}
                   </li>
@@ -51,7 +59,10 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
               </h2>
               <ul className="space-y-3">
                 {agent.solutions.map((solution, index) => (
-                  <li key={index} className="text-gray-400 flex items-start gap-2">
+                  <li
+                    key={index}
+                    className="text-gray-400 flex items-start gap-2"
+                  >
                     <span className="text-garden-success mt-1">•</span>
                     {solution}
                   </li>
@@ -82,19 +93,21 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
           </Card>
 
           <div className="text-center flex justify-center gap-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
-              onClick={() => window.open('https://advancedmatcher.streamlit.app/', '_blank')}
+              onClick={() =>
+                window.open("https://advancedmatcher.streamlit.app/", "_blank")
+              }
             >
               <Brain className="mr-2 h-5 w-5" />
               Try Me
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               className="border-garden-accent text-garden-accent hover:bg-garden-accent hover:text-white"
-              onClick={() => window.open('/feedback', '_blank')}
+              onClick={() => window.open("/feedback", "_blank")}
             >
               <MessageSquare className="mr-2 h-5 w-5" />
               Tell Us What You Think
