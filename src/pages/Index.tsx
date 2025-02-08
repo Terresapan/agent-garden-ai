@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
@@ -8,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 
 const agents = [
@@ -125,6 +125,9 @@ const Index = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [showResponse, setShowResponse] = useState(false);
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
   const navigate = useNavigate();
 
   const filteredAgents =
@@ -144,6 +147,12 @@ const Index = () => {
       setShowResponse(true);
       setQuery("");
     }
+  };
+
+  const handleFeedbackSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ username, email, comment });
+    // You can add toast notification or other feedback here
   };
 
   return (
@@ -254,8 +263,8 @@ const Index = () => {
         {/* Load More Button */}
         <div className="mt-12 flex justify-center">
           <Button
-            variant="outline"
-            className="border-garden-accent/20 text-garden-accent hover:bg-garden-accent/10"
+            variant="default"
+            className="bg-[#1EAEDB] hover:bg-[#1EAEDB]/90 text-white"
           >
             Load More
           </Button>
@@ -332,6 +341,64 @@ const Index = () => {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Feedback Section */}
+      <div className="container mx-auto px-4 py-24">
+        <div className="max-w-2xl mx-auto">
+          <Card className="p-6 bg-garden-dark/50 backdrop-blur">
+            <h1 className="text-3xl font-bold mb-6 text-white">Share Your Feedback</h1>
+            
+            <form onSubmit={handleFeedbackSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="username" className="block text-sm font-medium text-gray-200 mb-2">
+                  Username
+                </label>
+                <Input
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="bg-garden-dark/50 border-garden-accent/20 text-white"
+                  placeholder="Enter your username"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-200 mb-2">
+                  Email
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="bg-garden-dark/50 border-garden-accent/20 text-white"
+                  placeholder="Enter your email"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="comment" className="block text-sm font-medium text-gray-200 mb-2">
+                  Comment
+                </label>
+                <Textarea
+                  id="comment"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  className="bg-garden-dark/50 border-garden-accent/20 text-white h-32"
+                  placeholder="Share your thoughts..."
+                />
+              </div>
+              
+              <Button 
+                type="submit"
+                className="w-full bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
+              >
+                Submit Feedback
+              </Button>
+            </form>
+          </Card>
+        </div>
       </div>
 
       <Footer />
