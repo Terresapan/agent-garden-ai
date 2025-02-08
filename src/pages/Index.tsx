@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { AgentCard } from "@/components/AgentCard";
 import { CategoryFilter } from "@/components/CategoryFilter";
@@ -196,6 +197,13 @@ const Index = () => {
 
       {/* Agents Section */}
       <div className="container mx-auto px-4 py-24">
+        {/* Strategy Band */}
+        <div className="w-full bg-garden-dark py-12 mb-12 border-y border-garden-accent/20">
+          <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-200">
+            From Strategy to Execution: Scale Your Business with Intelligent AI Solutions
+          </h2>
+        </div>
+
         <div className="flex gap-6 mb-12">
           <Card
             onClick={() => navigate(`/agent/mememorph`)}
@@ -262,6 +270,13 @@ const Index = () => {
             Load More
           </Button>
         </div>
+      </div>
+
+      {/* Feedback Band */}
+      <div className="w-full bg-garden-accent/10 py-12 mb-24">
+        <h2 className="text-4xl font-bold text-garden-accent">
+          Your Feedback, Our Priority
+        </h2>
       </div>
 
       {/* Chat Assistant Button */}
