@@ -161,7 +161,6 @@ const Index = () => {
 
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center">
-        {/* Background Image with Blur Effect */}
         <div
           className="absolute inset-0 z-0"
           style={{
@@ -174,7 +173,6 @@ const Index = () => {
           <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-lg"></div>
         </div>
 
-        {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <div className="flex justify-center mb-6">
@@ -189,7 +187,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-8 h-12 border-2 border-garden-accent rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-3 bg-garden-accent rounded-full"></div>
@@ -199,9 +196,7 @@ const Index = () => {
 
       {/* Agents Section */}
       <div className="container mx-auto px-4 py-24">
-        {/* Featured Cards */}
         <div className="flex gap-6 mb-12">
-          {/* Featured Agent Card */}
           <Card
             onClick={() => navigate(`/agent/mememorph`)}
             className="w-2/3 group cursor-pointer overflow-hidden bg-garden-dark border-garden-accent/20 hover:border-garden-accent/40 transition-all duration-300"
@@ -226,7 +221,6 @@ const Index = () => {
             </div>
           </Card>
 
-          {/* Locked Card */}
           <Card className="w-1/3 relative group cursor-pointer overflow-hidden bg-garden-dark/50 backdrop-blur border-garden-accent/20">
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -260,7 +254,6 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Load More Button */}
         <div className="mt-12 flex justify-center">
           <Button
             variant="default"
@@ -293,7 +286,6 @@ const Index = () => {
           )}
         </Button>
 
-        {/* Chat Window */}
         {isChatOpen && (
           <div className="absolute bottom-20 right-0 w-80 bg-garden-dark border border-garden-accent/20 rounded-lg shadow-lg overflow-hidden">
             <div className="p-4 border-b border-garden-accent/20">
@@ -322,7 +314,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Chat Input */}
             <div className="p-4 border-t border-garden-accent/20">
               <div className="flex gap-2">
                 <Textarea
@@ -344,7 +335,7 @@ const Index = () => {
       </div>
 
       {/* Feedback Section */}
-      <div className="container mx-auto px-4 py-24">
+      <div id="feedback" className="container mx-auto px-4 py-24">
         <div className="max-w-2xl mx-auto">
           <Card className="p-6 bg-garden-dark/50 backdrop-blur">
             <h1 className="text-3xl font-bold mb-6 text-white">Share Your Feedback</h1>
