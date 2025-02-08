@@ -6,19 +6,6 @@ export const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
-  const scrollToFeedback = () => {
-    // If not on home page, navigate home first
-    if (!isHomePage) {
-      window.location.href = '/#feedback';
-    } else {
-      // If already on home page, just scroll
-      const feedbackSection = document.getElementById('feedback');
-      if (feedbackSection) {
-        feedbackSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-garden-dark/80 backdrop-blur-sm border-b border-garden-accent/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -40,12 +27,6 @@ export const Header = () => {
           >
             TAP Agent Garden for SMB
           </Link>
-          <button
-            onClick={scrollToFeedback}
-            className="text-garden-accent hover:text-garden-accent/80 transition-colors"
-          >
-            Tell Us What You Think
-          </button>
         </div>
       </div>
     </header>

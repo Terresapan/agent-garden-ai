@@ -1,8 +1,10 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, XCircle, MessageSquare } from "lucide-react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 interface AgentPageProps {
   agent: {
@@ -15,6 +17,12 @@ interface AgentPageProps {
 }
 
 export const AgentPage = ({ agent }: AgentPageProps) => {
+  const navigate = useNavigate();
+
+  const handleFeedbackClick = () => {
+    navigate('/#feedback');
+  };
+
   return (
     <div className="min-h-screen bg-garden-dark">
       <Header />
@@ -107,7 +115,7 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
               size="lg"
               variant="outline"
               className="border-garden-accent text-garden-accent hover:bg-garden-accent hover:text-white"
-              onClick={() => window.open("/feedback", "_blank")}
+              onClick={handleFeedbackClick}
             >
               <MessageSquare className="mr-2 h-5 w-5" />
               Tell Us What You Think
