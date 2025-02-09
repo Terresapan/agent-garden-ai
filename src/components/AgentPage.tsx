@@ -20,7 +20,7 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
   const navigate = useNavigate();
 
   const handleFeedbackClick = () => {
-    navigate('/#feedback');
+    navigate('/consultants#feedback');
   };
 
   return (
