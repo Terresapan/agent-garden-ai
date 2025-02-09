@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +13,13 @@ import {
 } from "@/components/ui/select";
 import { Bot, Brain, DollarSign, Users } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const ConsultantsPage = () => {
   const [formData, setFormData] = useState({
@@ -287,28 +293,61 @@ const ConsultantsPage = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-16">
             Consultant Spotlight
           </h2>
-          <div className="max-w-3xl mx-auto bg-garden-dark/50 backdrop-blur p-8 rounded-lg border border-garden-accent/20">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
-                  alt="Consultant"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <blockquote className="text-white text-lg italic mb-4">
-                  "Joining Agent Garden has transformed my consulting practice.
-                  The AI tools have helped me deliver better results for my
-                  clients while growing my business."
-                </blockquote>
-                <p className="text-garden-accent font-semibold">
-                  Sarah Johnson
-                </p>
-                <p className="text-gray-400">Digital Strategy Consultant</p>
-              </div>
-            </div>
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent>
+              {[
+                {
+                  name: "Sarah Johnson",
+                  role: "Digital Strategy Consultant",
+                  image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+                  quote: "Joining Agent Garden has transformed my consulting practice. The AI tools have helped me deliver better results for my clients while growing my business."
+                },
+                {
+                  name: "Michael Chen",
+                  role: "AI Implementation Specialist",
+                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+                  quote: "The platform's AI capabilities have revolutionized how I approach client solutions. It's empowering to be part of such an innovative ecosystem."
+                },
+                {
+                  name: "Elena Rodriguez",
+                  role: "Business Transformation Consultant",
+                  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+                  quote: "Agent Garden's tools have helped me scale my consulting services and create more impact for SMBs across different industries."
+                }
+              ].map((consultant, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/1">
+                  <div className="bg-garden-dark/50 backdrop-blur p-8 rounded-lg border border-garden-accent/20">
+                    <div className="flex flex-col md:flex-row items-center gap-8">
+                      <div className="w-32 h-32 rounded-full overflow-hidden">
+                        <img
+                          src={consultant.image}
+                          alt={consultant.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <blockquote className="text-white text-lg italic mb-4">
+                          "{consultant.quote}"
+                        </blockquote>
+                        <p className="text-garden-accent font-semibold">
+                          {consultant.name}
+                        </p>
+                        <p className="text-gray-400">{consultant.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
