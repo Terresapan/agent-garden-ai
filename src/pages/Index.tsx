@@ -12,6 +12,13 @@ import { useNavigate } from "react-router-dom";
 
 const agents = [
   {
+    id: "data-whisperer",
+    title: "Data Whisperer",
+    description: "Translate complex datasets into simple, strategic insights",
+    category: "Featured",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
+  },
+  {
     id: "mememorph",
     title: "MemeMorph",
     description: "Morphing web pages into viral memes",
@@ -237,7 +244,7 @@ const Index = () => {
   const featuredAgent = agents.find((agent) => agent.category === "Featured");
 
   const handleChatSubmit = () => {
-    navigate("/agent/mememorph");
+    navigate("/agent/data-whisperer");
     setIsChatOpen(false);
   };
 
@@ -303,7 +310,7 @@ const Index = () => {
 
         <div className="flex gap-6 mb-12">
           <Card
-            onClick={() => navigate(`/agent/mememorph`)}
+            onClick={() => navigate(`/agent/data-whisperer`)}
             className="w-2/3 group cursor-pointer overflow-hidden bg-garden-dark border-garden-accent/20 hover:border-garden-accent/40 transition-all duration-300"
           >
             <div className="aspect-video overflow-hidden">

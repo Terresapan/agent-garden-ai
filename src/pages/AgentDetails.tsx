@@ -2,6 +2,21 @@ import { useParams } from "react-router-dom";
 import { AgentPage } from "@/components/AgentPage";
 
 const agentData = {
+  "data-whisperer": {
+    title: "Data Whisperer",
+    description: "Translate complex datasets into simple, strategic insights",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
+    problems: [
+      "Data complexity",
+      "Communication challenges",
+      "Information overload",
+    ],
+    solutions: [
+      "Data simplification AI",
+      "Strategic insight generation",
+      "Clear data visualization",
+    ],
+  },
   mememorph: {
     title: "MemeMorph",
     description: "Morphing web pages into viral memes",
@@ -331,21 +346,6 @@ const agentData = {
       "Automated KPI tracking",
       "Performance metric analysis",
       "Real-time insights dashboard",
-    ],
-  },
-  "data-whisperer": {
-    title: "Data Whisperer",
-    description: "Translate complex datasets into simple, strategic insights",
-    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
-    problems: [
-      "Data complexity",
-      "Communication challenges",
-      "Information overload",
-    ],
-    solutions: [
-      "Data simplification AI",
-      "Strategic insight generation",
-      "Clear data visualization",
     ],
   },
   "narrative-numbers": {
