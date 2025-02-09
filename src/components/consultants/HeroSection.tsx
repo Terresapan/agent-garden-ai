@@ -24,8 +24,8 @@ export const HeroSection = ({ onScrollToForm }: HeroSectionProps) => {
             Join the Agent Garden Consultant Network
           </h1>
           <p className="text-2xl text-white mb-8">
-            Leverage AI-powered agents to drive business success. Get exclusive
-            tools, support, and revenue opportunities.
+            Leverage AI-powered agents to drive business success. Gain access to
+            exclusive tools, support, and a collaborative community of experts.
           </p>
           <Button
             onClick={onScrollToForm}

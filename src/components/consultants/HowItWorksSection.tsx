@@ -1,26 +1,25 @@
-
 export const HowItWorksSection = () => {
   const steps = [
     {
       step: "Sign up as a consultant",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      alt: "Person signing up"
+      alt: "Person signing up",
     },
     {
-      step: "Explore AI-powered business tools",
+      step: "Contribute valuable agent ideas",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      alt: "AI business tools"
+      alt: "AI business tools",
     },
     {
       step: "Connect with SMBs and provide solutions",
       image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
-      alt: "Business meeting"
+      alt: "Business meeting",
     },
     {
-      step: "Earn commissions or consulting fees",
+      step: "Receive a token of appreciation for your ideas",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      alt: "Success metrics"
-    }
+      alt: "Success metrics",
+    },
   ];
 
   return (

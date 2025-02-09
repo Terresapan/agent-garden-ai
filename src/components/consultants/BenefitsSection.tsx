@@ -1,4 +1,3 @@
-
 import { Bot, Brain, DollarSign, Users } from "lucide-react";
 
 export const BenefitsSection = () => {
@@ -10,8 +9,9 @@ export const BenefitsSection = () => {
     },
     {
       icon: <DollarSign className="h-12 w-12 text-garden-accent" />,
-      title: "New Revenue Streams",
-      description: "Earn commissions or service fees by onboarding SMBs.",
+      title: "Idea Contribution Incentives",
+      description:
+        "Receive a token of appreciation for contributing valuable ideas.",
     },
     {
       icon: <Brain className="h-12 w-12 text-garden-accent" />,

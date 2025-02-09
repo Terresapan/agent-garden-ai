@@ -93,8 +93,8 @@ export const IdeaForm = () => {
                 <SelectTrigger className="bg-garden-dark/50 border-garden-accent/20 text-white">
                   <SelectValue placeholder="Select your expertise" />
                 </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="ai">Artificial Intelligence</SelectItem>
+                <SelectContent className="bg-garden-dark/90 border-garden-accent/20 text-white">
+                  <SelectItem value="fiance">Finance</SelectItem>
                   <SelectItem value="marketing">Digital Marketing</SelectItem>
                   <SelectItem value="strategy">Business Strategy</SelectItem>
                   <SelectItem value="tech">Technology</SelectItem>

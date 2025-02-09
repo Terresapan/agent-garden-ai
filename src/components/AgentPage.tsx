@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Brain, CheckCircle, XCircle, MessageSquare } from "lucide-react";
@@ -20,7 +19,13 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
   const navigate = useNavigate();
 
   const handleFeedbackClick = () => {
-    navigate('/consultants#feedback');
+    navigate("/");
+    setTimeout(() => {
+      const feedbackSection = document.getElementById("feedback");
+      if (feedbackSection) {
+        feedbackSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
   };
 
   return (
@@ -105,7 +110,7 @@ export const AgentPage = ({ agent }: AgentPageProps) => {
               size="lg"
               className="bg-garden-accent hover:bg-garden-accent/90 text-garden-dark"
               onClick={() =>
-                window.open("https://advancedmatcher.streamlit.app/", "_blank")
+                window.open("https://mrdatawhisperer.streamlit.app/", "_blank")
               }
             >
               <Brain className="mr-2 h-5 w-5" />

@@ -21,16 +21,16 @@ const partners = [
     logo: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
   },
   {
-    name: "Microsoft",
-    contribution:
-      "Supporting AI integration and cloud solutions for businesses",
-    logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-  },
-  {
     name: "Google Cloud",
     contribution:
       "Offering cloud infrastructure and machine learning resources",
     logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+  },
+  {
+    name: "Microsoft",
+    contribution:
+      "Supporting AI integration and cloud solutions for businesses",
+    logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
   },
 ];
 

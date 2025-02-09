@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { X, Send, Bot } from "lucide-react";
@@ -19,7 +18,8 @@ export const ChatAssistant = () => {
   const handleSendMessage = () => {
     if (query.trim()) {
       setShowResponse(true);
-      setQuery("");
+      // Keep the user query
+      // setQuery("");
     }
   };
 
@@ -53,10 +53,10 @@ export const ChatAssistant = () => {
           <div className="p-4 h-80 overflow-y-auto">
             <div className="space-y-4">
               <div className="text-white">
-                Tell me the problem you want to solve, and let me pick an agent for
-                you!
+                Tell me the problem you want to solve, and let me pick an agent
+                for you!
               </div>
-
+              {showResponse && <p className="text-white mb-2">User: {query}</p>}
               {showResponse && (
                 <div className="bg-garden-accent/10 p-3 rounded-lg">
                   <p className="text-white mb-2">
