@@ -20,7 +20,16 @@ const partners = [
     contribution: "Providing grants and AI-powered consulting services to SMBs",
     logo: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
   },
-  // Add more partners here as needed
+  {
+    name: "Microsoft",
+    contribution: "Supporting AI integration and cloud solutions for businesses",
+    logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+  },
+  {
+    name: "Google Cloud",
+    contribution: "Offering cloud infrastructure and machine learning resources",
+    logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+  },
 ];
 
 const HowItWorksCards = [
@@ -170,7 +179,7 @@ const PartnersPage = () => {
             <CarouselContent>
               {partners.map((partner, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
-                  <div className="bg-garden-dark/50 backdrop-blur p-8 rounded-lg border border-garden-accent/20">
+                  <div className="bg-garden-dark/50 backdrop-blur p-8 rounded-lg border border-garden-accent/20 hover:border-garden-accent/40 transition-all duration-300 hover:scale-105">
                     <div className="flex flex-col items-center text-center">
                       <img
                         src={partner.logo}
@@ -186,8 +195,8 @@ const PartnersPage = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
           </Carousel>
         </div>
       </section>
