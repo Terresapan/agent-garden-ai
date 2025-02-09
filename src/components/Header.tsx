@@ -1,5 +1,4 @@
 
-import { ArrowLeft } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
@@ -15,15 +14,6 @@ export const Header = () => {
             alt="The Acceleration Project Logo" 
             className="h-8 w-auto"
           />
-          {!isHomePage && (
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-garden-accent hover:text-garden-accent/80 transition-colors"
-            >
-              <ArrowLeft className="h-5 w-5" />
-              <span>Back</span>
-            </Link>
-          )}
         </div>
         <nav className="flex items-center gap-6">
           <Link
