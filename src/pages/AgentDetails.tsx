@@ -213,6 +213,216 @@ const agentData = {
       "Strategy execution roadmap",
     ],
   },
+  "risk-radar": {
+    title: "Risk Radar",
+    description: "Assess risks and make informed decisions with AI-driven analysis",
+    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
+    problems: [
+      "Difficulty assessing business risks",
+      "Uncertainty in decision-making",
+      "Lack of data-driven risk analysis",
+    ],
+    solutions: [
+      "AI-powered risk assessment",
+      "Data-driven decision recommendations",
+      "Comprehensive risk monitoring",
+    ],
+  },
+  "trade-off-tactician": {
+    title: "Trade-Off Tactician",
+    description: "Weigh pros and cons to optimize strategic choices",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    problems: [
+      "Complex decision trade-offs",
+      "Difficulty balancing multiple factors",
+      "Suboptimal strategic choices",
+    ],
+    solutions: [
+      "AI-driven trade-off analysis",
+      "Multi-factor decision optimization",
+      "Strategic choice recommendations",
+    ],
+  },
+  "bias-buster": {
+    title: "Bias Buster",
+    description: "Identify and counter cognitive biases in decision-making",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    problems: [
+      "Cognitive biases affecting decisions",
+      "Unconscious prejudices",
+      "Limited perspective in analysis",
+    ],
+    solutions: [
+      "Bias detection algorithms",
+      "Cognitive bias mitigation",
+      "Balanced decision frameworks",
+    ],
+  },
+  "consensus-builder": {
+    title: "Consensus Builder",
+    description: "Facilitate team alignment with AI-powered insights",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    problems: [
+      "Team misalignment",
+      "Difficult group decisions",
+      "Ineffective consensus building",
+    ],
+    solutions: [
+      "AI-facilitated team alignment",
+      "Group decision optimization",
+      "Consensus tracking analytics",
+    ],
+  },
+  "scenario-sage": {
+    title: "Scenario Sage",
+    description: "Simulate future scenarios to guide better choices",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+    problems: [
+      "Uncertainty about future outcomes",
+      "Limited scenario planning",
+      "Risk in strategic decisions",
+    ],
+    solutions: [
+      "AI-powered scenario simulation",
+      "Future outcome prediction",
+      "Strategic planning insights",
+    ],
+  },
+  "insight-seeker": {
+    title: "Insight Seeker",
+    description: "Extract actionable insights from raw data effortlessly",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    problems: [
+      "Raw data complexity",
+      "Time-consuming analysis",
+      "Difficulty finding actionable insights",
+    ],
+    solutions: [
+      "Automated insight extraction",
+      "Quick data analysis",
+      "Action recommendation engine",
+    ],
+  },
+  "pattern-profiler": {
+    title: "Pattern Profiler",
+    description: "Detect trends and anomalies in your business data",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    problems: [
+      "Hidden data patterns",
+      "Missed business opportunities",
+      "Undetected anomalies",
+    ],
+    solutions: [
+      "AI pattern recognition",
+      "Trend analysis automation",
+      "Anomaly detection system",
+    ],
+  },
+  "kpi-compass": {
+    title: "KPI Compass",
+    description: "Track and interpret key performance metrics with ease",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    problems: [
+      "Complex KPI tracking",
+      "Metric interpretation challenges",
+      "Performance visibility issues",
+    ],
+    solutions: [
+      "Automated KPI tracking",
+      "Performance metric analysis",
+      "Real-time insights dashboard",
+    ],
+  },
+  "data-whisperer": {
+    title: "Data Whisperer",
+    description: "Translate complex datasets into simple, strategic insights",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
+    problems: [
+      "Data complexity",
+      "Communication challenges",
+      "Information overload",
+    ],
+    solutions: [
+      "Data simplification AI",
+      "Strategic insight generation",
+      "Clear data visualization",
+    ],
+  },
+  "narrative-numbers": {
+    title: "Narrative Numbers",
+    description: "Turn your data into compelling, easy-to-digest stories",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    problems: [
+      "Boring data presentations",
+      "Low data engagement",
+      "Complex information sharing",
+    ],
+    solutions: [
+      "Automated story generation",
+      "Data visualization",
+      "Engaging presentation creation",
+    ],
+  },
+  "growth-guru": {
+    title: "Growth Guru",
+    description: "Uncover the best strategies to scale your brand effectively",
+    image: "https://images.unsplash.com/photo-1507207611509-ec012433ff52",
+    problems: [
+      "Scaling challenges",
+      "Growth strategy uncertainty",
+      "Resource allocation issues",
+    ],
+    solutions: [
+      "AI-powered growth strategies",
+      "Resource optimization",
+      "Scalable solution planning",
+    ],
+  },
+  "persona-painter": {
+    title: "Persona Painter",
+    description: "Define and refine your ideal customer profiles with AI",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+    problems: [
+      "Unclear customer profiles",
+      "Targeting inefficiency",
+      "Market misunderstanding",
+    ],
+    solutions: [
+      "AI customer profiling",
+      "Target audience analysis",
+      "Persona optimization",
+    ],
+  },
+  "funnel-forger": {
+    title: "Funnel Forger",
+    description: "Optimize your sales funnel for maximum conversions",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    problems: [
+      "Low conversion rates",
+      "Funnel bottlenecks",
+      "Customer journey gaps",
+    ],
+    solutions: [
+      "Funnel optimization AI",
+      "Conversion rate improvement",
+      "Customer journey mapping",
+    ],
+  },
+  "competitive-compass": {
+    title: "Competitive Compass",
+    description: "Analyze competitors and position your brand strategically",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
+    problems: [
+      "Market positioning challenges",
+      "Competitor analysis difficulty",
+      "Strategic differentiation",
+    ],
+    solutions: [
+      "Competitor analysis AI",
+      "Market positioning strategy",
+      "Differentiation insights",
+    ],
+  },
 };
 
 const AgentDetails = () => {
