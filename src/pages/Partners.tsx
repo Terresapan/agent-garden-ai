@@ -35,7 +35,7 @@ const PartnersPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-lg"></div>
+          <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-sm"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
