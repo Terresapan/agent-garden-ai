@@ -25,7 +25,7 @@ export const ConsultantSpotlight = () => {
       name: "Elena Rodriguez",
       role: "Business Transformation Consultant",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-      quote: "Agent Garden's tools have helped me scale my consulting services and create more impact for SMBs across different industries."
+      quote: "Agent Garden's tools have helped me scale my consulting services and create more impact for SMBs across different industries. The platform's innovative approach and AI integration have completely transformed how I deliver value to my clients."
     }
   ];
 
