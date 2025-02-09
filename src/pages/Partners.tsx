@@ -129,7 +129,7 @@ const PartnersPage = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-16">
             How It Works
           </h2>
-          <div className="flex flex-col md:flex-row gap-4 justify-between max-w-3xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8 justify-between max-w-4xl mx-auto">
             {HowItWorksCards.map((card, index) => (
               <div
                 key={index}
