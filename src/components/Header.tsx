@@ -10,6 +10,11 @@ export const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-garden-dark/80 backdrop-blur-sm border-b border-garden-accent/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
+          <img 
+            src="/lovable-uploads/e115a3e1-74ab-4d9c-b2c1-35262aeaec21.png" 
+            alt="The Acceleration Project Logo" 
+            className="h-8 w-auto"
+          />
           {!isHomePage && (
             <Link
               to="/"
