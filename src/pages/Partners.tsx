@@ -23,6 +23,24 @@ const partners = [
   // Add more partners here as needed
 ];
 
+const HowItWorksCards = [
+  {
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    title: "Connect",
+    description: "Join our network of partners",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df",
+    title: "Define",
+    description: "Set your partnership goals",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+    title: "Impact",
+    description: "Create meaningful change",
+  },
+];
+
 const PartnersPage = () => {
   return (
     <div className="min-h-screen bg-garden-dark">
@@ -112,43 +130,31 @@ const PartnersPage = () => {
             How It Works
           </h2>
           <div className="flex flex-col md:flex-row gap-4 justify-between max-w-3xl mx-auto">
-            {[
-              {
-                step: "Apply or Connect",
-                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
-                description: "Start your journey by applying to our network or connecting with our team.",
-              },
-              {
-                step: "Define Partnership Scope",
-                image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df",
-                description: "Work together to establish partnership goals and expectations.",
-              },
-              {
-                step: "Collaborate & Impact",
-                image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
-                description: "Create meaningful change through active collaboration.",
-              },
-            ].map((item, index) => (
-              <HoverCard key={index}>
-                <HoverCardTrigger>
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="w-24 h-24 rounded-full bg-garden-accent/20 flex items-center justify-center text-4xl font-bold text-garden-accent mb-4 transition-all duration-300 group-hover:bg-garden-accent/30">
+            {HowItWorksCards.map((card, index) => (
+              <div
+                key={index}
+                className="group relative flex-1 cursor-pointer transition-all duration-300"
+              >
+                <div className="overflow-hidden rounded-xl h-[300px] relative group-hover:scale-[1.02] transition-all duration-300">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-300" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <span className="text-3xl font-bold text-garden-accent mb-2">
                       {index + 1}
-                    </div>
-                    <p className="text-white text-lg">{item.step}</p>
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-gray-200 text-sm">
+                      {card.description}
+                    </p>
                   </div>
-                </HoverCardTrigger>
-                <HoverCardContent className="w-80 bg-garden-dark border border-garden-accent/20">
-                  <div className="flex flex-col gap-3">
-                    <img
-                      src={item.image}
-                      alt={item.step}
-                      className="w-full h-40 object-cover rounded-md"
-                    />
-                    <p className="text-sm text-gray-300">{item.description}</p>
-                  </div>
-                </HoverCardContent>
-              </HoverCard>
+                </div>
+              </div>
             ))}
           </div>
         </div>
