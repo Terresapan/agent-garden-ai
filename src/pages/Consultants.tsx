@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -53,12 +54,12 @@ const ConsultantsPage = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')",
+              "url('/lovable-uploads/db773f15-b21b-4597-8558-e1c6ad91a3a1.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-lg"></div>
+          <div className="absolute inset-0 bg-garden-dark/40 backdrop-blur-sm"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
