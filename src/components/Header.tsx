@@ -20,13 +20,33 @@ export const Header = () => {
             </Link>
           )}
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-8">
           <Link
             to="/"
             className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-500 to-green-300 hover:opacity-80 transition-opacity"
           >
             TAP Agent Garden for SMB
           </Link>
+          <nav className="flex items-center gap-6">
+            <Link
+              to="/"
+              className="text-white hover:text-garden-accent transition-colors"
+            >
+              SMB
+            </Link>
+            <Link
+              to="/consultants"
+              className="text-white hover:text-garden-accent transition-colors"
+            >
+              Consultants
+            </Link>
+            <Link
+              to="/partners"
+              className="text-white hover:text-garden-accent transition-colors"
+            >
+              Partners
+            </Link>
+          </nav>
         </div>
       </div>
     </header>
