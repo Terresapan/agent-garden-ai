@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -34,7 +33,7 @@ export const IdeaForm = () => {
     <section id="idea-form" className="py-24 container mx-auto px-4">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-white mb-8">
-          Contribute & Innovate – Submit Your AI Consulting Idea
+          Submit Your AI Consulting Idea
         </h2>
         <form
           onSubmit={handleSubmit}

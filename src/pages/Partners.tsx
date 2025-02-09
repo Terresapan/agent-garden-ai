@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -23,12 +22,14 @@ const partners = [
   },
   {
     name: "Microsoft",
-    contribution: "Supporting AI integration and cloud solutions for businesses",
+    contribution:
+      "Supporting AI integration and cloud solutions for businesses",
     logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
   },
   {
     name: "Google Cloud",
-    contribution: "Offering cloud infrastructure and machine learning resources",
+    contribution:
+      "Offering cloud infrastructure and machine learning resources",
     logo: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
   },
 ];
@@ -61,8 +62,7 @@ const PartnersPage = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')",
+            backgroundImage: "url('/lovable-uploads/forest.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -76,12 +76,17 @@ const PartnersPage = () => {
               Empower SMB Together with AI-Driven Consulting
             </h1>
             <p className="text-2xl text-white mb-8">
-              Our partners play a crucial role in empowering SMBs by providing grants, donations, and access to AI-powered consulting services.
+              Our partners play a crucial role in empowering SMBs by providing
+              grants, donations, and offering cloud infrastructure.
             </p>
             <Button
               size="lg"
               className="bg-garden-accent text-garden-dark hover:bg-garden-accent/90"
-              onClick={() => document.getElementById('featured-partners')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("featured-partners")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               View Our Partners
             </Button>
@@ -99,17 +104,20 @@ const PartnersPage = () => {
             {
               icon: <Bot className="h-12 w-12 text-garden-accent" />,
               title: "Supporting SMBs",
-              description: "Empower businesses with AI-powered consulting solutions.",
+              description:
+                "Empower businesses with AI-powered consulting solutions.",
             },
             {
               icon: <DollarSign className="h-12 w-12 text-garden-accent" />,
               title: "Expanding Resources",
-              description: "Provide comprehensive advisory services to your clients.",
+              description:
+                "Provide comprehensive advisory services to your clients.",
             },
             {
               icon: <Brain className="h-12 w-12 text-garden-accent" />,
               title: "Strengthening CSR",
-              description: "Enhance your corporate social responsibility initiatives.",
+              description:
+                "Enhance your corporate social responsibility initiatives.",
             },
             {
               icon: <Users className="h-12 w-12 text-garden-accent" />,
@@ -151,7 +159,7 @@ const PartnersPage = () => {
                     alt={card.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-garden-dark/60 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-300" />
+                  <div className="absolute inset-0 bg-garden-dark/40 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-300" />
                   <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
                     <span className="text-3xl font-bold text-garden-accent mb-2">
                       {index + 1}
@@ -159,9 +167,7 @@ const PartnersPage = () => {
                     <h3 className="text-xl font-bold text-white mb-2">
                       {card.title}
                     </h3>
-                    <p className="text-gray-200 text-sm">
-                      {card.description}
-                    </p>
+                    <p className="text-gray-200 text-sm">{card.description}</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +214,8 @@ const PartnersPage = () => {
           Ready to Make an Impact?
         </h2>
         <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-          Join us in empowering SMBs with AI-powered solutions and create lasting positive change in the business community.
+          Join us in empowering SMBs with AI-powered solutions and create
+          lasting positive change in the business community.
         </p>
         <Button
           size="lg"

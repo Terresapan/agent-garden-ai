@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -13,20 +12,23 @@ export const ConsultantSpotlight = () => {
       name: "Sarah Johnson",
       role: "Digital Strategy Consultant",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-      quote: "Joining Agent Garden has transformed my consulting practice. The AI tools have helped me deliver better results for my clients while growing my business."
+      quote:
+        "Joining Agent Garden has transformed my consulting practice. The AI tools have helped me deliver better results for my clients while growing my business.",
     },
     {
       name: "Michael Chen",
       role: "AI Implementation Specialist",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
-      quote: "The platform's AI capabilities have revolutionized how I approach client solutions. It's empowering to be part of such an innovative ecosystem."
+      quote:
+        "The platform's AI capabilities have revolutionized how I approach client solutions. It's empowering to be part of such an innovative ecosystem.",
     },
     {
       name: "Elena Rodriguez",
       role: "Business Transformation Consultant",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-      quote: "Agent Garden's tools have helped me scale my consulting services and create more impact for SMBs. The platform's innovative approach has transformed how I deliver value to clients."
-    }
+      quote:
+        "Agent Garden's tools have helped me create more impact for SMBs. The platform's innovative approach has transformed how I deliver value to clients.",
+    },
   ];
 
   return (

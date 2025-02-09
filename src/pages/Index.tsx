@@ -113,7 +113,8 @@ const agents = [
   {
     id: "risk-radar",
     title: "Risk Radar",
-    description: "Assess risks and make informed decisions with AI-driven analysis",
+    description:
+      "Assess risks and make informed decisions with AI-driven analysis",
     category: "Decision Making",
     image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81",
   },
@@ -262,8 +263,7 @@ const Index = () => {
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage:
-              "url('/lovable-uploads/e115a3e1-74ab-4d9c-b2c1-35262aeaec21.png')",
+            backgroundImage: "url('/lovable-uploads/smb.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

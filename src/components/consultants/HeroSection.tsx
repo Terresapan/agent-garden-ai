@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 interface HeroSectionProps {
@@ -11,8 +10,7 @@ export const HeroSection = ({ onScrollToForm }: HeroSectionProps) => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage:
-            "url('/lovable-uploads/ab78b1b5-7e4f-45d5-867b-079d835d947e.png')",
+          backgroundImage: "url('/lovable-uploads/background.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
