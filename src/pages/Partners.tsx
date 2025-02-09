@@ -1,3 +1,4 @@
+
 import {
   Carousel,
   CarouselContent,
@@ -72,7 +73,7 @@ const PartnersPage = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-teal-500 to-green-200 bg-clip-text text-transparent">
-              Empowering Businesses Together with AI-Driven Consulting
+              Empower SMB Together with AI-Driven Consulting
             </h1>
             <p className="text-2xl text-white mb-8">
               Our partners play a crucial role in empowering SMBs by providing grants, donations, and access to AI-powered consulting services.
