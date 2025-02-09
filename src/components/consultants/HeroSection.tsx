@@ -12,7 +12,7 @@ export const HeroSection = ({ onScrollToForm }: HeroSectionProps) => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage:
-            "url('/lovable-uploads/6e7bd016-43b9-469f-91a8-8cd3c100a84e.png')",
+            "url('/lovable-uploads/b74df630-fd61-4b0d-894f-b4fc62f4435a.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
