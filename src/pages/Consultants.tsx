@@ -54,7 +54,7 @@ const ConsultantsPage = () => {
           className="absolute inset-0 z-0"
           style={{
             backgroundImage:
-              "url('/lovable-uploads/e115a3e1-74ab-4d9c-b2c1-35262aeaec21.png')",
+              "url('/lovable-uploads/6e7bd016-43b9-469f-91a8-8cd3c100a84e.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
