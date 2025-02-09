@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -9,6 +8,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Bot, Brain, DollarSign, Users } from "lucide-react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const partners = [
   {
@@ -107,21 +111,44 @@ const PartnersPage = () => {
           <h2 className="text-4xl font-bold text-center text-white mb-16">
             How It Works
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 justify-between">
+          <div className="flex flex-col md:flex-row gap-4 justify-between max-w-3xl mx-auto">
             {[
-              "Apply or Connect",
-              "Define Partnership Scope",
-              "Collaborate & Impact",
-            ].map((step, index) => (
-              <div
-                key={index}
-                className="flex flex-col items-center text-center"
-              >
-                <div className="w-16 h-16 rounded-full bg-garden-accent/20 flex items-center justify-center text-2xl font-bold text-garden-accent mb-4">
-                  {index + 1}
-                </div>
-                <p className="text-white">{step}</p>
-              </div>
+              {
+                step: "Apply or Connect",
+                image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+                description: "Start your journey by applying to our network or connecting with our team.",
+              },
+              {
+                step: "Define Partnership Scope",
+                image: "https://images.unsplash.com/photo-1573497491765-dccce02b29df",
+                description: "Work together to establish partnership goals and expectations.",
+              },
+              {
+                step: "Collaborate & Impact",
+                image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
+                description: "Create meaningful change through active collaboration.",
+              },
+            ].map((item, index) => (
+              <HoverCard key={index}>
+                <HoverCardTrigger>
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="w-24 h-24 rounded-full bg-garden-accent/20 flex items-center justify-center text-4xl font-bold text-garden-accent mb-4 transition-all duration-300 group-hover:bg-garden-accent/30">
+                      {index + 1}
+                    </div>
+                    <p className="text-white text-lg">{item.step}</p>
+                  </div>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-80 bg-garden-dark border border-garden-accent/20">
+                  <div className="flex flex-col gap-3">
+                    <img
+                      src={item.image}
+                      alt={item.step}
+                      className="w-full h-40 object-cover rounded-md"
+                    />
+                    <p className="text-sm text-gray-300">{item.description}</p>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
             ))}
           </div>
         </div>
