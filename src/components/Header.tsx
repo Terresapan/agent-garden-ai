@@ -11,7 +11,7 @@ export const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <img 
-            src="/lovable-uploads/e115a3e1-74ab-4d9c-b2c1-35262aeaec21.png" 
+            src="/lovable-uploads/23823012-483b-4996-b6f8-2b521ed8dd50.png" 
             alt="The Acceleration Project Logo" 
             className="h-8 w-auto"
           />
